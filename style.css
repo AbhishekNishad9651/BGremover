@@ -1,0 +1,457 @@
+/* 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+}
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+}
+
+.container {
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    max-width: 600px;
+    width: 90%;
+    border-radius: 15px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.upload_area {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    border: 3px dashed #fff;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.upload_area:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.btns {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 12px 25px;
+    background-color: #4caf50;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+.btn:hover {
+    background-color: #45a049;
+    cursor: pointer;
+}
+
+#removeBgBtn:hover {
+    background-color: #00bcd4;
+}
+#resetBtn:hover {
+    background-color: #f44336;
+}
+
+.result {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    min-height: 200px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.result img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.gallery {
+    margin-top: 30px;
+    text-align: center;
+}
+.gallery-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+.gallery img {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.gallery img:hover {
+    transform: scale(1.1);
+} */
+
+/* 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+}
+
+@keyframes gradient-animation {
+    0% { background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d); }
+    50% { background: linear-gradient(135deg, #2c3e50, #34495e, #8e44ad); }
+    100% { background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d); }
+}
+
+body {
+    animation: gradient-animation 10s ease infinite;
+}
+
+.container {
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    max-width: 600px;
+    width: 90%;
+    border-radius: 15px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: scale(1);
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.upload_area {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    border: 3px dashed #fff;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.upload_area:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+.btns {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 12px 25px;
+    background-color: #4caf50;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+    background-color: #45a049;
+    cursor: pointer;
+    transform: translateY(-2px);
+}
+
+#removeBgBtn:hover {
+    background-color: #00bcd4;
+}
+
+#resetBtn:hover {
+    background-color: #f44336;
+}
+
+.result {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    min-height: 200px;
+    background-color: rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.result img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.gallery {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.gallery-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.gallery img {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.gallery img:active {
+    transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+}
+ */
+
+
+ /* Resetting and setting up box model */
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Background animation for a dynamic look */
+ @keyframes gradient-animation {
+    0% { background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d); }
+    50% { background: linear-gradient(135deg, #2c3e50, #34495e, #8e44ad); }
+    100% { background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d); }
+}
+
+body {
+    animation: gradient-animation 10s ease infinite;
+} 
+
+/* Container styling */
+.container {
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    max-width: 600px;
+    width: 90%;
+    border-radius: 15px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+    font-family: 'Poppins', sans-serif; /* New unique font */
+}
+
+.container:hover {
+    transform: scale(1);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.8); /* Glowing effect */
+    /* border: 3px solid #00bcd4; /* Glowing border */
+} 
+
+/* Shine effect for inner content */
+.upload_area, .btns {
+    position: relative;
+    padding: 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Subtle shadow */
+} 
+
+.upload_area:hover, .btns:hover {
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.7); /* Shine effect */
+    /* transform: scale(1.05); /* Slight scale on hover */
+ }
+
+/* Text shine and glowing font */
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+    text-shadow: 0 0 15px rgba(0, 255, 255, 1), 0 0 30px rgba(0, 255, 255, 0.8); /* Glowing text effect */
+    font-family: 'Poppins', sans-serif; 
+} 
+
+/* Button hover effect */
+.btn {
+    padding: 12px 25px;
+    background-color: #4caf50;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+    background-color: #45a049;
+    cursor: pointer;
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.8); /* Glowing effect */
+}
+
+#removeBgBtn:hover {
+    background-color: #00bcd4;
+}
+
+#resetBtn:hover {
+    background-color: #f44336;
+} 
+
+/* Additional styling for result section */
+.result {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    min-height: 200px;
+    background-color: rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.result img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+} 
+
+/* Gallery effect */
+.gallery img {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.gallery img:active {
+    transform: scale(0.95);
+} 
+
+/* Media query for smaller screens */
+   @media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+}

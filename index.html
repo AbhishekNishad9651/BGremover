@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Remover</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Background Remover</h1>
+            <div class="upload_area" id="upload_area">
+                <p>Drag & Drop or click to Upload Image</p>
+                <input type="file" id="ImageInput" hidden>
+            </div>
+        </header>
+        <div class="btns">
+            <button class="btn" id="removeBgBtn" aria-label="Remove Background">Remove Background</button>
+            <button class="btn" id="resetBtn" aria-label="Reset Image">Reset</button>
+        </div>
+        <div class="result" id="result">
+            <p>No image processed yet.</p>
+        </div>
+        <div class="gallery" id="gallery">
+            <h2>History</h2>
+            <div class="gallery-content" id="galleryContent"></div>
+        </div>
+    </div>
+
+    <noscript>
+        <p>Please enable JavaScript to use the background remover tool.</p>
+    </noscript>
+
+    <script src="script.js"></script>
+</body>
+</html>
